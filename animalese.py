@@ -134,7 +134,7 @@ def build_sentence(sentence, filename):
 def replace_swear_words(sentence):
     swear_words = ["fuck", "shit", "piss", "crap", "bugger"]
     for word in swear_words:
-        sentence = sentence.replace(word, "*"*len(word))
+        #sentence = sentence.replace(word, "*"*len(word))
         sentence = re.sub(word, "*"*len(word), sentence, flags=re.IGNORECASE)
     return sentence
 
@@ -407,4 +407,5 @@ if __name__=="__main__":
     except Exception as e:
         print(e)
         print(traceback.format_exc())
+
         print("Program stopped because of error")
