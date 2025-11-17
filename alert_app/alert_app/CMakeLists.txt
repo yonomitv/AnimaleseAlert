@@ -18,7 +18,7 @@ set(BUILD_SHARED_LIBS OFF CACHE INTERNAL "")
 
 set(SDL_SHARED OFF)
 set(SDL_STATIC ON)
-
+message(STATUS "hiya")
 FetchContent_Declare(
 	SDL
 	GIT_REPOSITORY https://github.com/libsdl-org/SDL.git
@@ -113,7 +113,8 @@ set(BUILD_SHARED_LIBS TRUE)
 set_source_files_properties("${CMAKE_SOURCE_DIR}/include/clay.h" PROPERTIES LANGUAGE C)
 
 
-add_executable (alert_app "alert_app.cpp" "clayman.cpp")
+#add_executable (alert_app "alert_app.cpp" "clayman.cpp" "alert_app_STT.cpp")
+add_executable (alert_app "alert_app_STT.cpp" "clayman.cpp")
 
 target_compile_options(alert_app PUBLIC)
 
