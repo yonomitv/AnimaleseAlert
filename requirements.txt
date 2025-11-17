@@ -1,3 +1,5 @@
 requests
 profanityfilter
 pydub
+sounddevice
+vosk
